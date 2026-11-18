@@ -34,19 +34,15 @@ def div(a, b):
     if a == 0:
         raise ZeroDivisionError("Division by zero")
     else:
-        return b/a
-def logarithm(a, b):
-    if b<1:
-        raise ValueError("Logarithm of non-positive number")
+        return b / a
+
+def log(a, b):
+    if a <= 0 or a == 1 or b <= 0:
+        raise ValueError("Base must be positive and not equal to 1, and argument must be positive.")
     else:
-        return math.log(b, a)
-def exp(a, b):
-    return a**b
+        return math.log(b,a)
 
-
-
-
-
+def exp(a, b): return a**b
 
 
 
